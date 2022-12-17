@@ -34,6 +34,8 @@
 * Explains interactive rebasing reasonably well (1.8: Interactive Rebasing)
 ### The Index is the Staging Area for your next Commit (Section 2: Index)
 * Index lets you control what of your working-tree changes from your last commit go into the next one (2.1: Meet the Middle Man)
+### Reset: Dangerous Magic
+### The Stash: Unreachable commits ftw?!?!
 
 ## Oh Shit, Git!?!
 * [link](https://ohshitgit.com/#accidental-commit-master)
@@ -43,3 +45,9 @@
 * [link](https://git-scm.com/book/en/v2/)
 * Explains the three states and how they relate in a timing diagram (1.3: Getting Started, The Three States)
 * Repository is only commits, blobs, and trees (3.1: Branches in a Nutshell)
+
+
+## The Thing About Git
+* [link](https://tomayko.com/blog/2008/the-thing-about-git)
+* Explains the Index's utility through a practical example
+    * "The tangled working copy problem", "viva la index", and "Solving The Tangled Working Copy Problem With Git’s Index"
