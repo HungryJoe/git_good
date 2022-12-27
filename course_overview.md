@@ -52,8 +52,9 @@ Now, I'll break each section outlined in the intro. into lessons.
 * The three states
     * Working tree/working directory
         * Your local directory (commonly referred to as "the repository")
-    * Index/staging area
+    * Staging Area
         * The middleman
+        * Also known as the "index"
         * Discuss more later once we understand commits better
     * Repository
         * An append-only filesystem of the working tree's history
@@ -66,7 +67,7 @@ Now, I'll break each section outlined in the intro. into lessons.
     * Create repository for class
     * View the three states via `status` and `log`
         * Make a new file
-        * Add it to the index
+        * Add it to the staging area
         * Commit it
     * View graph of history via `log`
         * Make another commit
@@ -85,9 +86,9 @@ Now, I'll break each section outlined in the intro. into lessons.
         * Trees give you content addressibility
 
 #### Lab/Homework
-### What is the Index?
+### What is the Staging Area?
 #### Lecture
-* The index lets you control which changes on your working tree go into your next commit
+* The staging area lets you control which changes on your working tree go into your next commit
 
 #### Lab/Homework
 ### What is a Branch?

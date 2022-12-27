@@ -29,11 +29,11 @@
 * CLI (Just static output)
 * Note: command with options: `git log --oneline --abbrev-commit --all --graph --decorate --color`
 
-# Index Visualizers
+# Staging Area Visualizers
 ## Gitk
 * GUI
-* Shows index icon above latest commit
-* Treats index like a commit
+* Shows staging-area icon above latest commit
+* Treats staging area like a commit
 * No view for unstaged changes
 
 ## Gitui
