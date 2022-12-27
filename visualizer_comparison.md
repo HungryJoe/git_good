@@ -26,8 +26,7 @@
 * Uninstallable on Mac for security reasons
 
 ## Git log
-* TUI
-* Just static output
+* CLI (Just static output)
 * Note: command with options: `git log --oneline --abbrev-commit --all --graph --decorate --color`
 
 # Index Visualizers
@@ -48,9 +47,9 @@
 * Pretty
 
 ## Git status
+* CLI (Just static output)
 * Separates staged and unstaged changes
 * Not pretty
-* Just static output
 * Comes with Git
 
 # Tree/Blob Visualizers
