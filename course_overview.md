@@ -47,6 +47,8 @@ Now, I'll break each section outlined in the intro. into lessons.
 ## Understanding Git
 ### Intro / What is a Repository?
 #### Lecture
+* What is this course?
+    * Go over the Course Overview (this document)
 * The three states
     * Working tree/working directory
         * Your local directory (commonly referred to as "the repository")
