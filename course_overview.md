@@ -40,6 +40,10 @@ There are a couple of ideas for what *lab* might mean:
 ## Software
 * Git
 * A terminal environment (where you'll run Git for all exercises)
+* The `git-graph` visualizer, which we will use to view repositories and commits as graphs
+    * Clone my fork [here](https://github.com/HungryJoe/git-graph), it's just a Python script
+* The Git TUI `gitui`, which we will use to visualize the staging area
+    * Installation instructions can be found [here](https://github.com/extrawurst/gitui#6--installation-top-)
 
 # Lesson Plan
 Now, I'll break each section outlined in the intro. into lessons.
@@ -65,11 +69,11 @@ Now, I'll break each section outlined in the intro. into lessons.
 * Discuss how often we want to meet
 * Individually:
     * Create repository for class
-    * View the three states via `status` and `log`
+    * View the three states via `gitui`
         * Make a new file
         * Add it to the staging area
         * Commit it
-    * View graph of history via `log`
+    * View graph of history via `git-graph`
         * Make another commit
         * Make a *branch* from the first commit, and commit there
         * Merge the branch back into the starting branch

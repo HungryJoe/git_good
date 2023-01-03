@@ -29,6 +29,12 @@
 * CLI (Just static output)
 * Note: command with options: `git log --oneline --abbrev-commit --all --graph --decorate --color`
 
+## git-graph
+* CLI (Generates static images)
+* Not pretty
+* Includes blobs, trees, commits, and branches in the same view
+* Gets very cluttered for non-trivial repos
+
 # Staging Area Visualizers
 ## Gitk
 * GUI
@@ -53,3 +59,8 @@
 * Comes with Git
 
 # Tree/Blob Visualizers
+## git-graph
+* CLI (Generates static images)
+* Not pretty
+* Includes blobs, trees, commits, and branches in the same view
+* Gets very cluttered for non-trivial repos
