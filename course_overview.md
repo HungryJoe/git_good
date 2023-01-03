@@ -17,6 +17,17 @@ There are a couple of ideas for what *lab* might mean:
 1. Like a lab in school, where assignments are done in-class after lecture so I can answer questions as they arise.
 1. More like a traditional lecture class, where assignments are done outside of class and questions can be raised in the first half of class.
 
+# The Purpose of This Course
+The purpose of this course is to help you understand and more effectively use one of the less well-understood tools that the software engineers here use every day.
+## Who This Course Is Intended For
+As implied above, this course is intended for software engineers who use Git in their daily lives.
+I will assume some familiarity with the mechanics of basic Git usage (i.e. how to turn your changes into a commit, how to interact with a remote Git server, how to create and merge branches).
+I will *not* assume that anyone taking this course has much of an understanding of these mechanics, or a very good internal model of what they actually do.
+I will also assume some familiarity with **graphs** and **trees** as they're defined in graph theory or computer science.
+
+For people who aren't familiar with Git or graphs and trees, it is my hope that you get something out of this course.
+If this relative lack of experience becomes a barrier to understanding, please let me know so that I can arrange additional materials for you.
+
 # Course Materials
 ## Primary Texts
 * [Think Like a Git](https://think-like-a-git.net)
@@ -30,12 +41,10 @@ There are a couple of ideas for what *lab* might mean:
     * Official documentation
 
 ## Supplemental Texts
-* Some texts to help understand (directed, acyclic, unweighted) **graphs** in the CS/graph-theory sense at a conceptual level:
-    * [Graphs in Computer Science *Portland State University*](https://web.cecs.pdx.edu/~sheard/course/Cs163/Doc/Graphs.html) (only through *Kinds of Graphs*)
-    * [Explained: Graphs *MIT News*](https://news.mit.edu/2012/explained-graphs-computer-science-1217) (only first couple paragraphs)
-    * [Graph (discrete mathematics) *Wikipedia*](hhttps://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#Definitionsttps://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#Definitions) (for the algebraically-minded)
-* Some texts to help understand **trees** in the CS/graph-theory sense at a conceptual level:
-    * [Tree (data structure) *Wikipedia*](https://en.wikipedia.org/wiki/Tree_(data_structure)) (only *Intro*, *Terminology*, *Examples of trees and non-trees*, and *Mathematical Terminology*)
+* [The Thing About Git](https://tomayko.com/blog/2008/the-thing-about-git)
+    * Explains the Staging Area's utility through a practical example
+* [Oh Shit, Git!?!](https://ohshitgit.com/)
+    * Solutions to common Git problems
 
 ## Software
 * Git
@@ -61,8 +70,7 @@ Now, I'll break each section outlined in the intro. into lessons.
         * Also known as the "index"
         * Discuss more later once we understand commits better
     * Repository
-        * An append-only filesystem of the working tree's history
-        * A graph of the working tree's history
+        * A graph representing an append-only filesystem of the working tree's history
 
 #### Lab/Homework
 * Discuss how to structure lab portion of each meeting
