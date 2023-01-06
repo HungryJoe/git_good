@@ -58,56 +58,10 @@ If this relative lack of experience becomes a barrier to understanding, please l
 Now, I'll break each section outlined in the intro. into lessons.
 
 ## Understanding Git
-### Intro / What is a Repository?
-#### Lecture
-* What is this course?
-    * Go over the Course Overview (this document)
-* The three states
-    * Working tree/working directory
-        * Your local directory (commonly referred to as "the repository")
-    * Staging Area
-        * The middleman
-        * Also known as the "index"
-        * Discuss more later once we understand commits better
-    * Repository
-        * A graph representing an append-only filesystem of the working tree's history
+* Intro / What is a Repository?
+* What is a Commit?
+* What is the Staging Area?
+* What is a Branch?
 
-#### Lab/Homework
-* Discuss how to structure lab portion of each meeting
-* Discuss how often we want to meet
-* Individually:
-    * Create repository for class
-    * View the three states via `gitui`
-        * Make a new file
-        * Add it to the staging area
-        * Commit it
-    * View graph of history via `git-graph`
-        * Make another commit
-        * Make a *branch* from the first commit, and commit there
-        * Merge the branch back into the starting branch
-
-### What is a Commit?
-#### Lecture
-* Commits are the fundamental unit of a repository
-    * Nodes in the graph
-    * Snapshots of history
-    * Pointers to filesystem trees plus references to parent commits
-        * Trees are like your working tree, but made of blobs instead of files
-        * Blobs are just content, no metadata (i.e. mtime, ctime, name, permissions)
-            * Trees own the metadata because different trees may associate different metadata with different blobs
-        * Trees give you content addressibility
-
-#### Lab/Homework
-### What is the Staging Area?
-#### Lecture
-* The staging area lets you control which changes on your working tree go into your next commit
-
-#### Lab/Homework
-### What is a Branch?
-#### Lecture
-* Branches are just references to commits.
-    * They keep up with your work, unlike tags.
-
-#### Lab/Homework
 ## Applying Your Understanding of Git to Common Problems
 ## (Optional) Configuring your Environment to make Git Easier to Use
