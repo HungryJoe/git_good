@@ -19,6 +19,7 @@ There are a couple of ideas for what *lab* might mean:
 
 # The Purpose of This Course
 The purpose of this course is to help you understand and more effectively use one of the less well-understood tools that the software engineers here use every day.
+
 ## Who This Course Is Intended For
 As implied above, this course is intended for software engineers who use Git in their daily lives.
 I will assume some familiarity with the mechanics of basic Git usage (i.e. how to turn your changes into a commit, how to interact with a remote Git server, how to create and merge branches).
