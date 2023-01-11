@@ -58,11 +58,11 @@ If this relative lack of experience becomes a barrier to understanding, please l
 # Lesson Plan
 Now, I'll break each section outlined in the intro. into lessons.
 
-## Understanding Git
-* Intro / What is a Repository?
-* What is a Commit?
-* What is the Staging Area?
-* What is a Branch?
+## 1. Understanding Git
+1. Intro / What is a Repository?
+2. What is a Commit?
+3. What is a Branch?
+4. What is the Staging Area?
 
-## Applying Your Understanding of Git to Common Problems
-## (Optional) Configuring your Environment to make Git Easier to Use
+## 2. Applying Your Understanding of Git to Common Problems
+## (Optional) 3. Configuring your Environment to make Git Easier to Use
