@@ -58,7 +58,16 @@
 * Once something's been committed, it's very hard to lose it.
 
 ### 3.1: Git Branches - Branches in a Nutshell
-* Repository is only commits, blobs, and trees (3.1: Branches in a Nutshell)
+* Repository is only commits, blobs, and trees (3.1)
+* "When you make a commit, Git stores a commit object that contains a pointer to the snapshot of the content you staged," plus some metadata (3.1).
+    * Metadata: committer name + email, author name + email, parent commit hashes, message
+    * Snapshot is a tree of blobs:
+        * blobs are versions of files (content only)
+        * trees are versions of directories that map blobs to file names
+* Walks through creating a small repository with diverging branches with diagrams
+* "A branch in Git is simply a lightweight movable pointer to one of these commits" (3.1).
+    * The initial branch (`master` by default, `main` for SSA) isn't special, it's just created automatically when a repository is initialized
+* HEAD is a special movable pointer that points to the branch you're cA branch in Git is simply a lightweight movable pointer to one of these commits.urrently on (or have "checked out")
 
 ### 7.7: Git Tools - Reset Demystified
 * Goes into more detail on the three states as "three trees" in 7.7: HEAD, Index, and Working Directory
@@ -72,6 +81,12 @@
     * Simplicity
     * Strong support for nonlinear development
 
+### 10.3: Git Internals - Git Objects
+* "Git is a content-addressable filesystem. Great. What does that mean? It means that at the core of Git is a simple key-value data store" (10.3)
+* Walks through how to make a blob
+* Introduces `git cat-file` as "sort of a Swiss army knife for inspecting Git objects" (10.3)
+* Walks through making a tree from scratch with diagrams
+* Walks through making a series of commits from plumbing commands with nice diagrams
 
 
 ## The Thing About Git
