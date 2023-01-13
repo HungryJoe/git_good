@@ -81,7 +81,7 @@
     * Simplicity
     * Strong support for nonlinear development
 
-### 10.3: Git Internals - Git Objects
+### 10.2: Git Internals - Git Objects
 * "Git is a content-addressable filesystem. Great. What does that mean? It means that at the core of Git is a simple key-value data store" (10.3)
 * Walks through how to make a blob
 * Introduces `git cat-file` as "sort of a Swiss army knife for inspecting Git objects" (10.3)
