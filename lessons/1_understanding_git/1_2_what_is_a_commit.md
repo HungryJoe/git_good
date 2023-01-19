@@ -1,29 +1,37 @@
 # What is a Commit?
 ## Lecture
-* Commits are the fundamental unit of a repository
-    * Nodes in the graph
-    * Snapshots of working tree's history
-    * Pointers to filesystem-like trees plus references to parent commits
+Git Repositories have only a few kinds of fundamental objects that can be manipulated in only a few ways.
+
+Since this lecture is about those things, it is very important:
+Everything else in this course will build on what we learn today.
 
 ### Git Objects
 * Only three kinds of objects in Git: commits, trees, and blobs
 * Every object is addressed (and uniquely identified) by a hash
-* Each is stored in `.git/objects/<hash[0:2]>/<hash[2:39]>`
+    * The hash depends on the entire contents (and metadata) of the object, making them all immutable.
+    * Each is stored in `.git/objects/<hash[0:2]>/<hash[2:39]>`
+    * Hashes are all 40 characters
+        * But, "As a convenience, Git requires only as many digits of the hash id as are necessary to uniquely identify it within the repository" (Git from the Bottom Up, Introducing the Blob).
+* Immutability means that:
+    * Git always knows when the Repository has changed because changes to objects will always result in new hashes for the modified versions and thus new objects for them.
+    * Deduplication is easy: two objects with the same contents+metadata are always the same object in storage.
+        * Kinda like if `a == b` implied `a is b` in Python
 
-#### Commits
-Commits each point to a single tree
-* Each represents a snapshot of the working tree's history
-* Metadata: commit author, commit committer, message
+#### Blobs
+Blobs are content
+* Each represents a particular version of a file
+* Metadata: size (derivable from content)
 
 #### Trees
 Trees are trees of blobs
 * Each represents a directory in the working tree
 * Metadata: name and permissions of each node (including blobs)
 
-#### Blobs
-Blobs are content
-* Each represents a particular version of a file
-* Metadata: size
+#### Commits
+Commits each point to a single tree
+* Each represents a snapshot of the working tree's history
+    * Or, a node in the graph that is the Repository
+* Metadata: commit author, commit committer, message, parent commit
 
 #### Teaser for next time
 * Branches are references to commits
@@ -54,8 +62,6 @@ The following are suggestions for viewing the Repository's state throughout the 
     1. Use `find .git/objects` to see that it only has a couple of empty directories
 
 #### Make Blobs
-1. Create a blob from stdin (rather than a file like you normally would)
-    1. `echo 'test content' | git hash-object -w --stdin`
 1. Create a couple of blobs from different versions of a file
     1. `echo 'version 1' > test.txt`
     1. `git hash-object -w test.txt`
@@ -66,6 +72,13 @@ The following are suggestions for viewing the Repository's state throughout the 
     1. `git cat-file -p 83baae61804e65cc73a7201a7252750c76066a30 > test.txt` should give you "version 1" in the file
     1. `git cat-file -p 1f7a7a472abf3dd9643fd615f6da379c4acb3e3a > test.txt` should give you "version 2" in the file
         1. **NB:** I know the hashes of these blobs because *they depend only on the blob's contents*.
+1. Try making a duplicate blob
+    1. `echo 'version 1' | git hash-object -w --std-in`
+    1. You should see that this blob's hash is the same as the first version of `test.txt` you made above.
+        1. Remember that a blob's hash depends only on its contents, so it doesn't matter what file they're in, or even if they're in a file to begin with.
+    1. You should also see that no new objects have been made with this operation. Since all objects are identified by the hash of their contents+metadata, this means that no existing object's contents or metadata have changed, either.
+    1. Since the Repository is fundamentally just the set of all Git objects in a given `.git` directory, the Repository as a whole hasn't changed.
+    1. It's safe to conclude that *making duplicate objects in Git is impossible.*
 
 #### Make Trees from Blobs
 1. Git writes trees from the Staging Area (Index), so you have to stage your blobs to make trees out of them.
