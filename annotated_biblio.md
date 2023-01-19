@@ -30,6 +30,7 @@
     * Emphasizes content-addressing with blobs & trees
         * Uses different methods to create them from different files with the same contents and shows the hashes are the same
     * Branches/tags are references to commits
+        * "How trees are made" extends the plumbing-only-repo example from 10.2 in Pro Git by setting the main branch to track a commit and setting HEAD to track that branch.
 * Explains a merge commit as a "'meta-commit', because its contents are related to work done solely in the repository, and not to new work done in the working tree." (1.7: Branching and the Power of Rebase).
     * Rebase lets you avoid these by rewriting the commits on the target branch.
         * Rewriting is needed because the parent of the base of the branch changes (from the common ancestor to the head of the source branch).
