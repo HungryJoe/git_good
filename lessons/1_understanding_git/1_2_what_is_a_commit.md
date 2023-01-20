@@ -20,18 +20,26 @@ Everything else in this course will build on what we learn today.
 #### Blobs
 Blobs are content
 * Each represents a particular version of a file
+* Like files in a filesystem
 * Metadata: size (derivable from content)
 
 #### Trees
 Trees are trees of blobs
-* Each represents a directory in the working tree
-* Metadata: name and permissions of each node (including blobs)
+* Each represents a directory in the working directory
+* Like directories in a filesystem
+* Metadata: name and permissions of each child
 
 #### Commits
-Commits each point to a single tree
-* Each represents a snapshot of the working tree's history
+Commits each point to a single tree representing the entire working directory
+* Each represents a point in the working directory's history
     * Or, a node in the graph that is the Repository
-* Metadata: commit author, commit committer, message, parent commit
+* Metadata: author, committer, message, references to parent commit(s), time of authoring, time of committing
+* Take a snapshot of the working directory (tree) and incorporate it into its history
+    * Answers some basic history questions about the snapshot:
+        * Who made it (committer, author)
+        * When it was made (time of authoring)
+        * Why it was made (message)
+        * The context in which it was made (references to parent commit(s))
 
 #### Teaser for next time
 * Branches are references to commits
