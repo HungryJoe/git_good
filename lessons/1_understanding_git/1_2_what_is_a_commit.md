@@ -51,8 +51,10 @@ Make a repository with a few commits using only low-level (plumbing) Git command
 
 ### Viewing tools
 The following are suggestions for viewing the Repository's state throughout the procedure below.
-* **List all objects in the repository:** `find .git/objects -type f`
-    * Objects are listed as files with names corresponding to their hashes
+
+* **List all objects in the repository:** `find .git/objects -type f` OR `git cat-file --batch-all-objects --batch-check`
+    * In the `find` command's output, objects are listed as files with names corresponding to their hashes
+    * In the `git` command's output, objects are listed as hashes with types and sizes
 * **View the contents of an object:** `git cat-file -p <object-hash>`
     * For **blobs**, prints its contents
     * For **trees**, lists its child objects with name, type, and hash
@@ -81,7 +83,7 @@ The following are suggestions for viewing the Repository's state throughout the 
     1. `git cat-file -p 1f7a7a472abf3dd9643fd615f6da379c4acb3e3a > test.txt` should give you "version 2" in the file
         1. **NB:** I know the hashes of these blobs because *they depend only on the blob's contents*.
 1. Try making a duplicate blob
-    1. `echo 'version 1' | git hash-object -w --std-in`
+    1. `echo 'version 1' | git hash-object -w --stdin`
     1. You should see that this blob's hash is the same as the first version of `test.txt` you made above.
         1. Remember that a blob's hash depends only on its contents, so it doesn't matter what file they're in, or even if they're in a file to begin with.
     1. You should also see that no new objects have been made with this operation. Since all objects are identified by the hash of their contents+metadata, this means that no existing object's contents or metadata have changed, either.
@@ -95,9 +97,10 @@ The following are suggestions for viewing the Repository's state throughout the 
 1. Write the contents of the Staging Area to a tree with
     1. `git write-tree`
 1. Now, do `the` same `thing`, `but` with the second version of `test.txt`, and a new file that will be added from the Working Tree rather than the Repository.
-    1. `git update-index --cacheinfo 100644 1f7a7a472abf3dd9643fd615f6da379c4acb3e3a test.txt`
+    1. `git update-index --cacheinfo 100644,1f7a7a472abf3dd9643fd615f6da379c4acb3e3a,test.txt`
     1. `echo 'new file' > new.txt`
     1. `git update-index --add new.txt`
+        1. **NB:** When given a file instead of `--cacheinfo <permissions>,<object>,<filename>`, `git update-index` automatically creates a blob from that file, and uses the file's name and permissions for the Staging Area
     1. `git write-tree`
 1. Lastly, make a nested tree by adding the first tree to the Staging Area as a subdirectory.
     1. `git read-tree --prefix=bak d8329fc1cc938780ffdd9f94e0d364e0ea74f579`
