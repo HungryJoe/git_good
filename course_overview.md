@@ -60,9 +60,12 @@ Now, I'll break each section outlined in the intro. into lessons.
 
 ## 1. Understanding Git
 1. Intro / What is a Repository?
-2. What is a Commit?
-3. What is a Branch?
-4. What is the Staging Area?
+1. What is a Commit?
+1. What is a Branch?
+1. What is the Staging Area?
+1. What is `reset`?
+1. What is `cherry-pick`?
+1. What is `rebase`?
 
 ## 2. Applying Your Understanding of Git to Common Problems
 ## (Optional) 3. Configuring your Environment to make Git Easier to Use

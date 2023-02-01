@@ -89,6 +89,9 @@
 * Walks through making a tree from scratch with diagrams
 * Walks through making a series of commits from plumbing commands with nice diagrams
 
+### 10.3: Git Internals - Git References
+* Goes over three-four kinds of references: branches, tags, remotes, and HEAD
+* Walks through making all but remotes with plumbing commands
 
 ## The Thing About Git
 * [link](https://tomayko.com/blog/2008/the-thing-about-git)
