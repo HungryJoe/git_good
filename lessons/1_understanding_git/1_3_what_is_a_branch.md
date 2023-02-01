@@ -1,10 +1,15 @@
 # What is a Branch?: Git References
 ## Lecture
-* 3 kinds of *references* in Git, plus HEAD
+* 3 kinds of *references* in Git, plus `HEAD`
 * All reference commits
     * Can be thought of as (reference name, commit hash) pairs
 * Generally contained in `.git/refs/<reference-type>/<reference-name>`
-    * File contains the commit hash being referenced
+    * Each reference file *only* contains the commit hash being referenced
+        * Makes creating and deleting references really cheap
+* Each commit defines a history through its parent(s)
+    * A reference to a commit says that its history is important
+        * Makes it findable so you can easily make use of it
+        * Tells Git not to garbage-collect it
 
 ### Tags
 * Two kinds: annotated and lightweight
@@ -22,8 +27,11 @@
 
 ### Branches
 * Just like lightweight tags, except they can move when they're checked out.
-* Branches make commits findable so that you can easily make use of them.
-    * Also so that Git doesn't garbage-collect them.
+    * Updated when you make a new commit and they're `HEAD`
+
+### `HEAD`
+
+### Remotes
 
 ## Lab/Homework
 
