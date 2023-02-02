@@ -97,3 +97,14 @@
 * [link](https://tomayko.com/blog/2008/the-thing-about-git)
 * Explains the Index's utility through a practical example
     * "The tangled working copy problem", "viva la index", and "Solving The Tangled Working Copy Problem With Git’s Index"
+
+
+## Git Manual
+* [link](https://git-scm.com/docs)
+
+### git-symbolic-ref
+* Implies that symbolic refs can only reference branch heads
+    * "Given one argument, reads which branch head the given symbolic ref refers to and outputs its path, relative to the .git/ directory."
+
+### git-checkout
+* DETACHED HEAD section discusses what "detached HEAD" means
