@@ -1,21 +1,23 @@
 # What is a Branch?: Git References
 ## Lecture
-* 3 kinds of **references** in Git, plus `HEAD`
-* All reference commits
-    * Can be thought of as (reference name, commit hash) pairs
-* Generally contained in `.git/refs/<reference-type>/<reference-name>`
-    * Each **reference** file *only* contains the commit hash being referenced
-        * Makes creating and deleting references really cheap
-            * Aligns with one of Git's design goals: "strong support for nonlinear development (thousands of parallel branches)" (https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git).
 * Each commit defines a history through its parent(s)
     * A **reference** to a commit says that its history is important
         * Makes it findable so you can easily make use of it
         * Tells Git not to garbage-collect it
+* 3 kinds of **references** in Git, plus `HEAD`
+    * Tags
+    * Branches
+    * `HEAD` (technically a **symbolic reference**)
+    * Remotes
+* All reference objects (usually commits)
+    * Can be thought of as (reference name, object hash) pairs
+* Generally contained in `.git/refs/<reference-type>/<reference-name>`
+    * Each **reference** file *only* contains the commit hash being referenced
+        * Makes creating and deleting references really cheap
+            * Aligns with one of Git's design goals: "strong support for nonlinear development (thousands of parallel branches)" (https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git).
 
 ### Tags
 * Two kinds: annotated and lightweight
-* Both reference commits
-    * Well, really they can reference any object, but usually they reference commits
 
 #### Lightweight Tags
 * **Location:** `.git/refs/tags/<tag-name>`
