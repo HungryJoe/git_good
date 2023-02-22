@@ -75,6 +75,7 @@
     * Index is "your proposed next commit" (The Index)
         * Also, it's "not technically a tree structure"
     * Nice walk-through of how your workflow affects each tree in "The Workflow"
+    * Index is not a set of diffs: "Git populates this index with a list of all the file contents that were last checked out into your working directory and what they looked like when they were originally checked out. You then replace some of those files with new versions of them, and git commit converts that into the tree for a new commit."
 
 ### 1.2: Getting Started - A Short History of Git
 * In 1.2, outlines some goals of Git:
