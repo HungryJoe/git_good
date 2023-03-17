@@ -20,14 +20,14 @@ Additionally, moving `HEAD` with `git switch` or `git checkout` causes a couple 
 * HEAD -> Staging Area: `git switch`/`git checkout` (moving `HEAD`)
 * Staging Area -> Working Tree: `git switch`/`git checkout` (moving `HEAD`)
 
-**NB:** You can't move `HEAD` in this way if there are unstaged or uncommitted changes that would be overwritten.
+**NB:** You can't move `HEAD` in this way if there are changes in the WT that would be overwritten.
 
 ## Rare Manipulation of the Three Trees with Reset
 Reset can do up to three tree manipulations not present above, in sequence.
 1. -> HEAD
     1. Moves the currently checked-out branch, which moves `HEAD` *without triggering the automatic updates shown above*
 1. HEAD -> Staging Area
-    1. Updates the Staging Area from `HEAD`'s contents, without triggering the automatic SA->WT update shown above *and* without regard for uncommitted changes
+    1. Updates the Staging Area from `HEAD`'s contents, without triggering the automatic SA->WT update shown above
 1. Staging Area -> Working Tree
     1. Updates the Working Tree from the Staging Area's contents, but *without regard for unstaged changes*
 
